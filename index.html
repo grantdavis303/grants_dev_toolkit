@@ -64,6 +64,10 @@
       <h6>Header 6</h6>
     </div>
 
+    <div class="success"></div>
+    <div class="warning"></div>
+    <div class="error"></div>
+
     <div>
       <h2>Text</h2>
 
@@ -115,7 +119,7 @@ const otherOtherNum = num + otherNum;
 console.log(otherOtherNum);</pre
       >
 
-      <blockquote>This is text In a blockquote. How does it look?</blockquote>
+      <blockquote>This is text in a blockquote. How does it look?</blockquote>
     </div>
 
     <div>
@@ -146,6 +150,27 @@ console.log(otherOtherNum);</pre
       <h2>Forms & Buttons</h2>
 
       <button>Button</button>
+
+      <form class="form">
+        <h2>Contact Us</h2>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
     </div>
 
     <div>

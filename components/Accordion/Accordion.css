@@ -1,6 +1,12 @@
+div.AccordionContainer {
+  margin: 1rem 0 3rem 0;
+  padding: 0;
+}
+
 div.AccordionOuterBox {
-  border: 1px solid black;
-  border-radius: 0.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
 
   padding: 0.5rem;
 
@@ -62,7 +68,7 @@ div.AccordionInnerBox {
 div.AccordionInnerBox.open {
   opacity: 1;
 
-  max-height: 1000px;
+  max-height: 2000px;
 }
 
 div.AccordionInnerBox.closed {
@@ -73,4 +79,8 @@ div.AccordionInnerBox.closed {
 
 div.AccordionInnerContent {
   padding: 1rem;
+}
+
+div.AccordionInnerContent > :first-child {
+  margin-top: 0;
 }

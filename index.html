@@ -6,30 +6,15 @@
     <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="./Good.css" type="text/css" />
     <style>
-      div#outerContainer {
+      div#outer_container {
         margin: 0 auto;
-
         min-width: 0;
       }
 
       div#content{
         margin: 0 auto;
         padding: 0 1rem 0 1rem;
-
         max-width: 1200px;
-      }
-
-      div#toggle-section {
-        width: fit-content;
-        margin-left: auto;
-        padding: 0;
-        position: sticky;
-        top: 2rem;
-      }
-
-      div#toggle-button{
-        margin: 0;
-        padding: 0;
       }
 
       div.field {
@@ -37,23 +22,20 @@
         padding-left: unset;
       }
     </style>
-    <title>Good CSS Test Page</title>
+    <title>Good CSS Demo Page</title>
   </head>
   <body>
 
-  <div id="outerContainer">
+  <div id="outer_container">
     <div id="content">
-
-      <div id="toggle-section">
-        <button id="toggle-button">Switch to Dark Mode</button>
-      </div>
-
       <div>
-        <h1 style="color: var(--primary);">Good CSS</h1>
+        <h1 style="color: var(--primary);">Hello!</h1>
 
-        <p>Hello! Welcome to the test page for Good CSS.</p>
-        <p>This test page uses Good CSS as the base with additional styles added on top of it.</p>
-        <p>Good CSS is meant to provide a starting place, and additional customization is highly encouraged.</p>
+        <h2> Welcome to the demo page for Good CSS. </h2>
+
+        <p>This demo page uses Good CSS as the base with additional styles applied on top of it.</p>
+        <p>Good CSS is meant to provide a starting place when first building out a web application, and additional customization is highly encouraged.</p>
+        <p>Toggle light and dark mode by typing this command into the Chrome browser bar: <code>chrome://settings/appearance</code>.</p>
       </div>
 
       <!-- Flex -->
@@ -305,7 +287,7 @@ console.log(otherOtherNum);</pre>
       </div>
 
       <div>
-        <form action="#" action="get" style="margin: 0 auto;">
+        <form action="#" action="get" style="margin: 0 auto; width: 600px;">
           <h2 class="title">Send Grant a Message</h2>
 
           <div>
@@ -319,7 +301,7 @@ console.log(otherOtherNum);</pre>
           </div>
 
           <div>
-            <textarea rows="10" cols="80"></textarea>
+            <textarea rows=""></textarea>
           </div>
 
           <div>
@@ -388,27 +370,5 @@ console.log(otherOtherNum);</pre>
 
     </div>
   </div>
-
-  <script>
-    const toggleButton = document.getElementById('toggle-button');
-
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleButton.textContent = 'Switch to Light Mode';
-    }
-
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-
-      if (document.body.classList.contains('dark-mode')) {
-        toggleButton.textContent = 'Switch to Light Mode';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        toggleButton.textContent = 'Switch to Dark Mode';
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  </script>
-
   </body>
 </html>

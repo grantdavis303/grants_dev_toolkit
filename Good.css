@@ -1,3 +1,8 @@
+/*
+    Good CSS
+    1/20/2026
+*/
+
 /* Import Inter from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Funnel+Sans:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
@@ -398,13 +403,18 @@ form {
   width: fit-content;
 }
 
-form div {
-  padding: unset;
+form > :first-child {
+  margin-top: 0;
+}
+
+form > div {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
 label {
   margin-right: 0.5rem;
-  font-weight: bold;
 }
 
 select {
@@ -419,6 +429,11 @@ input, textarea {
   color: var(--text);
   font-family: Inter, sans-serif;
   padding: 0.25rem;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -450,19 +465,7 @@ input[type="checkbox"], input[type="radio"] {
 
 /* Dark Mode */
 
-body.dark-mode {
-  --bg:         rgb(20, 23, 27);
-  --surface:    rgb(48, 48, 48);
-  --border:     rgb(72, 72, 72);
-  --text:       rgb(221, 221, 221);
-  --text-muted: rgb(165, 165, 165);
-  --inverse:    rgb(25, 25, 25);
-  --primary:    rgb(96, 165, 250);
-  --secondary:  rgb(59, 130, 246);
-  --active:     rgb(23, 60, 120);
-}
-
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --bg:         rgb(20, 23, 27);
     --surface:    rgb(48, 48, 48);
@@ -474,7 +477,7 @@ body.dark-mode {
     --secondary:  rgb(59, 130, 246);
     --active:     rgb(23, 60, 120);
   }
-} */
+}
 
 /* Media Queries */
 

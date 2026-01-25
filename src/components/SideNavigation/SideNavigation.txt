@@ -1,0 +1,21 @@
+// Adding the toggle functionality for a SideNavigation component in vanilla JS
+
+document.addEventListener('DOMContentLoaded', () => {
+  addSideNavigationToggle();
+});
+
+export default function addSideNavigationToggle() {
+  const allSideNavSections = document.querySelectorAll('.SideNavigationSection');
+
+  allSideNavSections.forEach(section => {
+    const sideNavTitleContainer = section.querySelector('.SideNavigationTitleContainer');
+    const arrow = section.querySelector('.DownArrow');
+
+    sideNavTitleContainer.addEventListener('click', () => {
+      const sideNavTitle = section.querySelector('.SideNavigationTitle');
+
+      arrow.classList.toggle('open');
+      section.classList.toggle('open');
+    });
+  });
+}

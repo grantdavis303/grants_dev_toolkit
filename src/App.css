@@ -1,0 +1,15 @@
+div#outer_container {
+  margin: 0 auto;
+  min-width: 0;
+}
+
+div#content{
+  margin: 0 auto;
+  padding: 0 1rem 0 1rem;
+  max-width: 1200px;
+}
+
+div.field {
+  margin-left: unset;
+  padding-left: unset;
+}

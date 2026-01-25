@@ -1,0 +1,86 @@
+div.AccordionContainer {
+  margin: 1rem 0 3rem 0;
+  padding: 0;
+}
+
+div.AccordionOuterBox {
+  /* background-color: var(--surface); */
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+
+div.AccordionHeader {
+  margin: unset;
+  padding: unset;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* Header Text */
+
+h3.AccordionHeaderTitle {
+  font-size: 1.25rem;
+  margin: 0.5rem;
+}
+
+/* Arrow Image */
+
+img.DownArrow {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+img.open {
+  transform: rotate(180deg);
+}
+
+img.closed {
+  transform: rotate(0deg);
+}
+
+/* Inner Box */
+
+div.AccordionInnerBox {
+  margin: unset;
+  padding: unset;
+
+  max-height: 0px;
+
+  overflow: hidden;
+
+  transition: opacity 0.6s ease-in-out, max-height 0.6s ease-in-out;
+}
+
+div.AccordionInnerBox.open {
+  opacity: 1;
+
+  max-height: 2000px;
+}
+
+div.AccordionInnerBox.closed {
+  opacity: 0;
+
+  max-height: 0px;
+}
+
+div.AccordionInnerContent {
+  padding: 1rem;
+}
+
+div.AccordionInnerContent > :first-child {
+  margin-top: 0;
+}

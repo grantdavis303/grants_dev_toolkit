@@ -1,6 +1,6 @@
 /*
     Good CSS
-    1/20/2026
+    2/4/2026
 */
 
 /* Import Inter from Google Fonts */
@@ -329,6 +329,16 @@ button:active {
   background-color: var(--active);
 }
 
+/* Design Elements */
+
+hr {
+  background-color: var(--border);
+  height: 1px;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Media */
 
 img, picture, video, canvas, svg {
@@ -397,9 +407,8 @@ form {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  margin: 1rem 0rem;
+  margin: 0rem;
   padding: 1rem;
-  width: fit-content;
 }
 
 form > :first-child {

@@ -1,8 +1,14 @@
 import Accordion from './components/Accordion/Accordion.tsx'
 import Card from './components/Card/Card.tsx'
+import Modal from './components/Modal/Modal.tsx'
 import './App.css'
+import {useState} from 'react';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // const toggleModal = () => setIsModalOpen(prev => !prev);
+
   return (
     <>
       <div id="outer_container">
@@ -97,6 +103,14 @@ function App() {
             </Card>
           </div>
 
+          <div>
+            <button onClick={() => setIsModalOpen(true)}>Open Modal</button>
+
+            {isModalOpen && (
+              <Modal setIsModalOpen={setIsModalOpen} />
+            )}
+          </div>
+
           {/* Header Hierarchy */}
 
           <div>
@@ -150,11 +164,10 @@ function App() {
             <h2>Special Text</h2>
 
             <p>
-              If you want to navigate to your desktop in a Linux terminal, type in
-              <code>cd ~/Desktop</code> and hit enter.
+              If you want to navigate to your desktop in a Linux terminal, type in <code>cd ~/Desktop</code> and hit enter.
             </p>
 
-            <pre>// This is multi-line formatted code.
+            <pre style={{ whiteSpace: "pre-wrap" }}>// This is multi-line formatted code.
 // Copy and paste the code below into your DevTools console.
 
 const num = 14;
